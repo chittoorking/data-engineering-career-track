@@ -24,3 +24,11 @@ user3 = pd.read_sql("SELECT * FROM rating WHERE user_id=8770", db_engine)
 
 # Use the helper function to compare the 3 users
 print_user_comparison(user1, user2, user3)
+
+
+# output:
+# Course id overlap between users:
+# ================================
+# User 1 and User 2 overlap: {32, 96, 36, 6, 7, 44, 95}
+# User 1 and User 3 overlap: set()
+# User 2 and User 3 overlap: set()
