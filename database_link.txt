@@ -1,0 +1,1 @@
+https://assets.datacamp.com/production/repositories/5000/datasets/8156d0e1565e3beec97de1fc935dc0e5a6275f4d/datacamp_application.sql
