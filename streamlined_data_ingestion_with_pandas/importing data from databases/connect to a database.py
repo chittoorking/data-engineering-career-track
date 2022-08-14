@@ -15,3 +15,7 @@ engine = create_engine("sqlite:///data.db")
 
 # View the tables in the database
 print(engine.table_names())
+
+
+# output:
+#   ['boro_census', 'hpd311calls', 'weather']
