@@ -18,3 +18,6 @@ pop_in_shelters = pd.read_json('dhs_daily_report.json')
 
 # View summary stats about pop_in_shelters
 print(pop_in_shelters.describe())
+
+# When getting data from a URL, like with open data portals, be mindful of how much data is being pulled and how often you do it. 
+# Requesting lots of data can strain shared resources.
