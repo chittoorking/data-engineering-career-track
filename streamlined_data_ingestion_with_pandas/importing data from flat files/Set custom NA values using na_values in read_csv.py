@@ -7,7 +7,7 @@ Create a dictionary, null_values, specifying that 0s in the zipcode column shoul
 Load vt_tax_data_2016.csv, using the na_values argument and the dictionary to make sure invalid ZIP codes are treated as missing.
 
 # Create dict specifying that 0s in zipcode are NA values
-null_values = {'zipcode':"0"}
+null_values = {'zipcode':0}
 
 # Load csv using na_values keyword argument
 data = pd.read_csv("vt_tax_data_2016.csv", 
