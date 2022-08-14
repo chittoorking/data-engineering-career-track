@@ -52,3 +52,7 @@ print(flat_cafes.head())
 # 2  coffeeroasteries  Coffee Roasteries           Devocion         devocion-brooklyn-3        4.0                   40.689                   -73.983
 # 3             cafes              Cafes           Devocion         devocion-brooklyn-3        4.0                   40.689                   -73.983
 # 4            coffee       Coffee & Tea  Coffee Project NY  coffee-project-ny-new-york        4.5                   40.727                   -73.989
+
+
+# Great job! Naming meta columns can get tedious for datasets with many attributes, and code is susceptible to breaking if column names or nesting levels change.
+# In such cases, you may have to write a custom function and employ techniques like recursion to handle the data.
