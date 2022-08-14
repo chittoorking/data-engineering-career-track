@@ -22,7 +22,7 @@
 # Create a new list called nums_list2 that starts at one, ends at eleven, and increments by two by unpacking a range object using the star character (*).
 
 # Create a range object that goes from 0 to 5
-nums = range(5)
+nums = range(6)
 print(type(nums))
 
 # Convert nums to a list
@@ -35,5 +35,5 @@ print(nums_list2)
 
 # output:
 # <class 'range'>
-# [0, 1, 2, 3, 4]
+# [0, 1, 2, 3, 4, 5]
 # [1, 3, 5, 7, 9, 11]
