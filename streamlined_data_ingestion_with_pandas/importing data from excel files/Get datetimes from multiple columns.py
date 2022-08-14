@@ -21,3 +21,7 @@ survey_data = pd.read_excel("fcc_survey_dts.xlsx",
 
 # View summary statistics about Part2Start
 print(survey_data.Part2Start.describe())
+
+
+#Note that the keys in a dictionary passed to parse_dates cannot be names of columns already in the dataframe.
+# Also, when combining columns to parse, their order in the list does not matter.
