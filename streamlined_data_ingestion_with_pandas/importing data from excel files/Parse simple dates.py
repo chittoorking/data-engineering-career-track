@@ -16,3 +16,7 @@ survey_data = pd.read_excel("fcc_survey.xlsx",
 
 # Print first few values of Part1StartTime
 print(survey_data.Part1StartTime.head())
+
+
+# pandas can automatically parse many common date and time formats. 
+# It can even parse standalone times, without dates, but the parsed times will have the date the code was run.
