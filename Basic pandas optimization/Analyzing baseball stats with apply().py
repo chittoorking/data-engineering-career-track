@@ -1,0 +1,43 @@
+# The Tampa Bay Rays want you to analyze their data.
+
+# They'd like the following metrics:
+
+# The sum of each column in the data
+# The total amount of runs scored in a year ('RS' + 'RA' for each year)
+# The 'Playoffs' column in text format rather than using 1's and 0's
+# The below function can be used to convert the 'Playoffs' column to text:
+
+# def text_playoffs(num_playoffs): 
+#     if num_playoffs == 1:
+#         return 'Yes'
+#     else:
+#         return 'No' 
+# Use .apply() to get these metrics. A DataFrame (rays_df) has been loaded and printed to the console. This DataFrame is indexed on the 'Year' column.
+
+# Instructions 
+# Apply sum() to each column of rays_df to collect the sum of each column. Be sure to specify the correct axis.
+
+# Gather sum of all columns
+stat_totals = rays_df.apply(sum, axis=0)
+print(stat_totals)
+
+# RS          3783
+# RA          3265
+# W            458
+# Playoffs       3
+# dtype: int64
+
+# Apply sum() to each row of rays_df, only looking at the 'RS' and 'RA' columns, and specify the correct axis.
+
+# Gather total runs scored in all games per year
+total_runs_scored = rays_df[['RS', 'RA']].apply(sum, axis=1)
+print(total_runs_scored)
+
+# output
+# 2012    1274
+# 2011    1321
+# 2010    1451
+# 2009    1557
+# 2008    1445
+# dtype: int64
+
