@@ -41,3 +41,14 @@ print(total_runs_scored)
 # 2008    1445
 # dtype: int64
 
+# Use .apply() and a lambda function to apply text_playoffs() to each row's 'Playoffs' value of the rays_df DataFrame.
+# Convert numeric playoffs to text by applying text_playoffs()
+textual_playoffs = rays_df.apply(lambda row: text_playoffs(row['Playoffs']), axis=1)
+print(textual_playoffs)
+
+# 2012     No
+# 2011    Yes
+# 2010    Yes
+# 2009     No
+# 2008    Yes
+# dtype: object
