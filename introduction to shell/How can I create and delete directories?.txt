@@ -1,0 +1,7 @@
+mv treats directories the same way it treats files:
+if you are in your home directory and run mv seasonal by-season, for example, mv changes the name of the seasonal directory to by-season. However, rm works differently.
+
+If you try to rm a directory, the shell prints an error message telling you it can't do that, 
+primarily to stop you from accidentally deleting an entire directory full of work. Instead, you can use a separate command called rmdir.
+For added safety, it only works when the directory is empty, so you must delete the files in a directory before you delete the directory.
+(Experienced users can use the -r option to rm to get the same effect; we will discuss command options in the next chapter.)
