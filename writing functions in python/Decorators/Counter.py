@@ -28,3 +28,9 @@ print('foo() was called {} times.'.format(foo.count))
 
 # output
 # foo() was called 2 times.
+
+# Cool counting! Now you can go decorate a bunch of functions with the counter() decorator,
+# let your program run for a while, and then print out how many times each function was called.
+
+# It seems a little magical that you can reference the wrapper() function from inside the definition of wrapper() as we do here on line 3.
+# That's just one of the many neat things about functions in Python -- any function, not just decorators.
