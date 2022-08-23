@@ -1,0 +1,8 @@
+It's easy and sensible to give files multi-word names like July 2017.csv when you are using a graphical file explorer. 
+However, this causes problems when you are working in the shell. For example, suppose you wanted to rename July 2017.csv to be 2017 July data.csv. You cannot type:
+
+mv July 2017.csv 2017 July data.csv
+because it looks to the shell as though you are trying to move four files called July, 2017.csv, 2017, and July (again) into a directory called data.csv.
+Instead, you have to quote the files' names so that the shell treats each one as a single parameter:
+
+mv 'July 2017.csv' '2017 July data.csv'
