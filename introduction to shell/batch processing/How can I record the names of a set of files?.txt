@@ -1,0 +1,20 @@
+People often set a variable using a wildcard expression to record a list of filenames. For example, if you define datasets like this:
+
+datasets=seasonal/*.csv
+you can display the files' names later using:
+
+for filename in $datasets; do echo $filename; done
+This saves typing and makes errors less likely.
+
+If you run these two commands in your home directory, how many lines of output will they print?
+
+files=seasonal/*.csv
+for f in $files; do echo $f; done
+
+output:
+
+$ files=seasonal/*.csv$ for f in $files; do echo $f; done
+seasonal/autumn.csv
+seasonal/spring.csv
+seasonal/summer.csv
+seasonal/winter.csv
