@@ -1,0 +1,94 @@
+As you work with command line tools you will often need to consult the documentation to remind yourself of the syntax or of some of the available functionality.
+In this exercise, you'll consult curl's documentation to answer this question:
+
+Based on the information in the curl manual, which of the following is NOT a supported file protocol:
+
+$ man curl | grep protocol
+       ported protocols (DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS,  IMAP,  IMAPS,
+       The URL syntax is protocol-dependent. You'll find a detailed description  in
+       If  you  specify  URL without protocol:// prefix, curl will attempt to guess
+       what protocol you might want. It will then default to  HTTP  but  try  other
+       protocols  based  on  often-used  host  name prefixes. For example, for host
+              getting a file with HTTPS, FTPS or another  SSL-based  protocol.  The
+              cate verification) or for  the  application  protocols.  "HOST1"  and
+              nal FTP protocol, and may not work on all servers,  but  they  enable
+              (HTTP FTP) Write the received protocol headers to the specified file.
+              (HTTP SMTP IMAP) For HTTP protocol family, this lets curl  emulate  a
+              For  SMTP and IMAP protocols, this is the mean to compose a multipart
+              the  standard  way  with negotiated protocol version in the TLS hand-
+              You can use the login options to specify  protocol  specific  options
+              To use a Metalink file in the local file system,  use  FILE  protocol
+              Please note that if FILE protocol is disabled, there is no way to use
+              proprietary protocol, reverse-engineered by clever people and  imple-
+       --preproxy [protocol://]host[:port]
+              The pre proxy string should be specified with a protocol:// prefix to
+              specify  alternative  proxy  protocols.  Use  socks4://,  socks4a://,
+              used. No protocol specified will make curl default to SOCKS4.
+       --proto-default <protocol>
+              Tells curl to use protocol for any URL missing a scheme name.
+              An   unknown   or  unsupported  protocol  causes  error  CURLE_UNSUP-
+              This option does not change the default proxy protocol (http).
+       --proto-redir <protocols>
+              Tells  curl to limit what protocols it may use on redirect. Protocols
+              how protocols are represented.
+              By  default  curl will allow all protocols on redirect except several
+              all or +all enables all protocols on redirect, including  those  dis-
+       --proto <protocols>
+              Tells curl to limit what protocols it may use in the transfer. Proto-
+              protocol name or
+              +  Permit  this  protocol  in addition to protocols already permitted
+              -  Deny this protocol, removing it from the list of protocols already
+              =  Permit  only  this protocol (ignoring the list already permitted),
+              --proto -ftps  uses the default protocols, but disables ftps
+       Unknown  protocols  produce a warning. This allows scripts to safely rely on
+       being able to disable potentially dangerous protocols, without relying  upon
+       support for that protocol being built into curl to avoid an error.
+       as concatenating the protocols into one instance of the option.
+       -x, --proxy [protocol://]host[:port]
+              The proxy string can be specified with a protocol:// prefix. No  pro-
+              SOCKS  version  to  be used.  (The protocol support was added in curl
+              HTTPS proxy support via https:// protocol prefix was added in  7.52.0
+              Unrecognized  and  unsupported  proxy  protocols cause an error since
+              7.52.0.  Prior versions may  ignore  the  protocol  and  use  http://
+              ently  be  converted to HTTP. It means that certain protocol specific
+              ronment variables, including the protocol prefix  (http://)  and  the
+              ify an HTTP 1.0 protocol instead of the default HTTP 1.1.
+              HTTP  protocols  to  attempt  to  tunnel through the proxy instead of
+              SFTP is a binary protocol. Unlike for FTP, curl interprets SFTP quote
+              port number should be the number used for the specific  protocol  the
+              socks4 proxy with -x, --proxy using a socks4:// protocol prefix.
+              socks4a proxy with -x, --proxy using a socks4a:// protocol prefix.
+              socks5  hostname  proxy  with -x, --proxy using a socks5h:// protocol
+              socks5 proxy with -x, --proxy using a socks5:// protocol prefix.
+              and TLS1.0 protocols known as BEAST.  If this option isn't used,  the
+              protocol headers in the output. It has no  effect  on  debug  options
+              Pass options to the telnet protocol. Supported options are:
+              then  that  protocol will be used, otherwise HTTP will be used. Since
+              7.45.0 guessing can be disabled by setting a  default  protocol,  see
+              The second line (starts with "Protocols:") shows all  protocols  that
+              SSL    SSL versions of  various  protocols  are  supported,  such  as
+              scheme         The  URL  scheme  (sometimes called protocol) that was
+                             specific to the particular protocol(s) involved.
+       http_proxy [protocol://]<host>[:port]
+       HTTPS_PROXY [protocol://]<host>[:port]
+       [url-protocol]_PROXY [protocol://]<host>[:port]
+              Sets  the  proxy server to use for [url-protocol], where the protocol
+              is a protocol that curl supports and as  specified  in  a  URL.  FTP,
+       ALL_PROXY [protocol://]<host>[:port]
+              Sets the proxy server to use if no protocol-specific proxy is set.
+       col:// prefix to specify alternative proxy protocols.
+       If no protocol is specified in the proxy string or  if  the  string  doesn't
+       The supported proxy protocol prefixes are as follows:
+       1      Unsupported protocol. This build of curl has no support for this pro-
+$ man curl | grep OFTP
+$
+
+LDAP
+
+FTPS
+
+HTTPS
+
+OFTP
+Ans:
+OFTP
