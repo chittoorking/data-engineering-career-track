@@ -1,0 +1,24 @@
+A file full of shell commands is called a *shell script, or sometimes just a "script" for short.
+Scripts don't have to have names ending in .sh, but this lesson will use that convention to help you keep track of which files are scripts.
+
+Scripts can also contain pipes. For example, if all-dates.sh contains this line:
+
+cut -d , -f 1 seasonal/*.csv | grep -v Date | sort | uniq
+then:
+
+bash all-dates.sh > dates.out
+will extract the unique dates from the seasonal data files and save them in dates.out.
+
+Instructions 
+A file teeth.sh in your home directory has been prepared for you, but contains some blanks.
+Use Nano to edit the file and replace the two ____ placeholders with seasonal/*.csv and -c 
+so that this script prints a count of the number of times each tooth name appears in the CSV files in the seasonal directory.
+
+$ nano teeth.sh
+
+$ bash teeth.sh > teeth.out$ cat teeth.out
+     15 bicuspid
+     31 canine
+     18 incisor
+     11 molar
+     17 wisdom
