@@ -1,0 +1,21 @@
+Which of the following commands will NOT show what version of Python is installed? Feel free to try out the various answers on the terminal.
+
+python
+
+python -V
+
+python --version
+
+which python
+
+Ans: which python
+Reason:which python shows the location where Python is installed on your machine. This does not always contain the version of Python in the folder name.
+
+$ python -VPython 3.6.9
+$ python --versionPython 3.6.9
+$ which python
+/usr/bin/python
+$ python
+Python 3.6.9 (default, Mar 15 2022, 13:55:28)
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
