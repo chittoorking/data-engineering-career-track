@@ -1,0 +1,6 @@
+
+
+Suppose you're trying to run a query with sql2csv but you've been having issues because the error message is not detailed enough to help debug the error.
+Which optional argument in sql2csv will print detailed tracebacks and logs when errors occur while using sql2csv?
+-v or --verbose
+
