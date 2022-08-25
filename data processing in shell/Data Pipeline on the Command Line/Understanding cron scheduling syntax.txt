@@ -12,3 +12,6 @@ Remember the syntax for Crontab:
 
 Ans:
 15 * * * * python model.py
+
+
+Cron has a 60 second granularity, which means the most frequent job it can run is every minute.
