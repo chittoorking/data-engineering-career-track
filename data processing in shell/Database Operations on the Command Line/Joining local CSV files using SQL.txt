@@ -1,0 +1,24 @@
+csvsql can be used to join CSV files together even when neither of them are in a database.
+Here, we have two CSV files Spotify_MusicAttributes.csv and Spotify_Popularity.csv that are both on song level but contain different attributes for each song.
+We can combine the two files together using a SQL-like JOIN, and we can do so, through the power of csvsql.
+
+
+Explore the data with the commands we have learned so far (e.g. csvstat, csvlook, etc). 
+What is the column that Spotify_MusicAttributes.csv and Spotify_Popularity.csv have in common that can be used as the JOIN key?
+
+
+$ csvcut -n "Spotify_MusicAttributes.csv"
+  1: track_id
+  2: danceability
+  3: duration_ms
+  4: instrumentalness
+  5: loudness
+  6: tempo
+  7: time_signature
+$ csvcut -n "Spotify_Popularity.csv"
+  1: track_id
+  2: popularity
+  
+  
+  Ans : 
+  track id
