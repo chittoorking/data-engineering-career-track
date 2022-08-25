@@ -1,0 +1,6 @@
+
+Print the pip version the same way as the Python version, using option flag --version
+
+pip can be used to upgrade itself using pip install --upgrade pip
+
+pip can be used to install csvkit since it is written in Python
