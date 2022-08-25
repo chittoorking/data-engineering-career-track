@@ -6,3 +6,8 @@ Use exactly these spellings and capitalizations.
 
 repl:~$ cat two_cities.txt | grep "Sydney Carton\|Charles Darnay" | wc -l
 77
+
+
+Nice piping! My code looked like this, though there are many ways to accomplish this 
+cat two_cities.txt | egrep 'Sydney Carton|Charles Darnay' | wc -l.
+Note that egrep is exactly the same as grep -E. Your skills in shell commands and pattern matching will be very useful in the next Bash scripts we create!
