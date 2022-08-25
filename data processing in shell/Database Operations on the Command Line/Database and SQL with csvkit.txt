@@ -23,4 +23,4 @@ csvsql 	--query "$sqlquery_union" SpotifyMostRecentData.csv Spotify201812.csv > 
 Push the newly created csv file UnionedSpotifyData.csv back to database SpotifyDatabase as its own table.
 
 # Push UnionedSpotifyData.csv to database as a new table
-csvsql --db "sqlite:///SpotifyDatabase.db" ----insert UnionedSpotifyData.csv
+csvsql --db "sqlite:///SpotifyDatabase.db" --insert UnionedSpotifyData.csv
